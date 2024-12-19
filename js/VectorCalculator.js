@@ -1,14 +1,14 @@
 class VectorCalculator extends RealCalculator{
     div(){
-        return null;
+         return null;
     }
 
-    add(a,b){
-        return new Vector(a.values.map((elem,index) => super.add(elem, b.values[index])));
+    add(a,b) {
+        return new Vector(a.values.map((elem,index) => super.sub(elem, -b.values[index])));
     }
 
     sub(a,b) {
-        return new Vector(a.values.map((elem,index) => super.sub(elem, b.values[index])))
+        return new Vector(b.values.map((elem,index) => super.sub(elem, a.values[index])))
     }
 
     prod(a, p) {
