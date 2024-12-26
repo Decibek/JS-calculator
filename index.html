@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Calculators</title>
+    <title>JS Calculator</title>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -26,34 +26,40 @@
 </head>
 
 <body>
-    <div>
+    <div class="container">
+      <h1>Калькулятор</h1>
+      <div>
         <textarea id="A" placeholder="A"></textarea>
-    </div>
-
-    <div>
+      </div>
+    
+      <div>
         <textarea id="B" placeholder="B"></textarea>
-    </div>
+      </div>
 
-    <div>
+      <div>
+        <textarea id="xValue" placeholder="getValue"></textarea>
+      </div>
+    
+      <div class="operand-group">
         <button class="operand" data-operand="add">+</button>
         <button class="operand" data-operand="sub">-</button>
         <button class="operand" data-operand="mult">×</button>
         <button class="operand" data-operand="div">÷</button>
-        <button class="operand" data-operand="pow">x <span
-                style="position: relative; bottom: .4em; right: .1em;">y</button>
-        <button class="operand" data-operand="add">Prod</button>
-        <button class="operand" data-operand="add">One</button>
-        <button class="operand" data-operand="add">Zero</button>
-        <button id="ce" data-operand="clear" onclick="backspc()">CE</button>
-        <button id="ac" data-operand="clearb" onclick="screen.value = ''">AC</button>
+        <button class="operand" data-operand="pow">x<sup>y</sup></button>
+      </div>
+      <div class="operand-group">
+        <button class="operand" data-operand="prod">Prod</button>
+        <button class="operand" data-operand="one">One</button>
+        <button class="operand" data-operand="zero">Zero</button>
+        <button class="operand" data-operand="getValue">getValue</button>
+      </div>
+      
 
-    </div>
-
-
-    <div>
+      <div>
         <textarea id="C" placeholder="Result"></textarea>
+      </div>
     </div>
-
+    
 </body>
 
 </html>

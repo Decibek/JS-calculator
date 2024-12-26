@@ -3,6 +3,7 @@ class Complex {
         this.re = re;
         this.im = im;
     }
+
     toString() {
         if (this.re === 0 && this.im === 0) 
             return '0';
@@ -11,8 +12,8 @@ class Complex {
         if (this.re === 0) 
             return this.im > 0 ? `i${this.im}` : `-i${this.im}`;
         if (Math.abs(this.im) === 1) {
-            return this.im > 0 ? `${this.re} + i` : `${this.re} -i`
+            return this.im > 0 ? `${this.re} + i` : `${this.re} - i`;
         }
-        return this.im > 0 ? `${this.re} +i${this.im}` : `${this.re} -${this.im}`;
+        return this.im > 0 ? `${this.re} + i${this.im}` : `${this.re} - i${Math.abs(this.im)}`;
     }
 }
